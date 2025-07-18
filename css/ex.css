@@ -1,0 +1,97 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 버튼예시 */
+.btn-download::before {
+  content: "⬇";
+  color: #fff;
+  margin-right: 3px;
+}
+.btn-download {
+  position: absolute;
+  /* top: 100px; */
+  left: 150px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  /* border: 0; */
+  border: none;
+  color: #fff;
+  background-color: #333;
+}
+.btn-download::after {
+  content: "⬇";
+  color: #fff;
+  margin-left: 3px;
+}
+/* 말풍선 꼬리 만들기 */
+.tooltip {
+  position: relative;
+  width: 100px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  border: 5px solid transparent;
+  /* border: 5px solid red; */
+  border-top-color: #333;
+}
+p {
+  display: inline-block;
+  border: 10px solid #333;
+  border-top-color: red;
+}
+/* 구분선 텍스트 */
+.divider {
+  text-align: center;
+  background-color: antiquewhite;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 1px;
+  background-color: #ccc;
+  vertical-align: middle;
+}
+.divider::before {
+  margin-right: 10px;
+}
+.divider::after {
+  margin-left: 10px;
+}
+/* 메뉴 구분선｜ */
+.menu {
+  background-color: aliceblue;
+  display: flex;
+}
+.menu a {
+  position: relative;
+  color: #333;
+  padding: 0 10px;
+  text-decoration: none;
+  background-color: aqua;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #333;
+}
+.menu a:last-child::after {
+  content: none;
+}

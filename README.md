@@ -1,1 +1,3 @@
-# transition
+# transition-ex
+##애니메이션 속성
+##인접 형제 선택자
